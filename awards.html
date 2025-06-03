@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awards - Justin Hou</title>
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #34495e;
+        --accent-color: #007bff;
+        --text-color: #333;
+        --background-color: #f5f5f5;
+        --card-background: white;
+      }
+
+      body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .header-title {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .nav a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .nav a:hover {
+        background-color: rgba(0, 123, 255, 0.1);
+      }
+
+      .nav a.active {
+        background-color: var(--accent-color);
+        color: white;
+      }
+
+      .awards-container {
+        background-color: var(--card-background);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .award-section {
+        margin-bottom: 40px;
+      }
+
+      .award-section:last-child {
+        margin-bottom: 0;
+      }
+
+      .award-header {
+        color: var(--primary-color);
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--accent-color);
+      }
+
+      .award-item {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+      }
+
+      .award-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .award-title {
+        color: var(--secondary-color);
+        font-size: 1.2em;
+        margin: 0 0 10px 0;
+      }
+
+      .award-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+
+      .award-description {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Justin Hou</h1>
+        <p>I. I. Rabi Scholar @ Columbia University, Learning something new every day!</p>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="posts.html">Posts</a>
+        <a href="projects.html">Projects</a>
+        <a href="tags.html">Tags</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="awards.html" class="active">Awards</a>
+      </nav>
+
+
+      <div class="awards-container">
+        <div class="award-section">
+          <div class="award-header">Academic Awards</div>
+          <div class="award-item">
+            <h3 class="award-title">I. I. Rabi Research Scholar</h3>
+            <div class="award-date">2023 - Present</div>
+            <p class="award-description">Recognition for academic excellence in research at Columbia University.</p>
+          </div>
+          <div class="award-item">
+            <h3 class="award-title">Dean's List</h3>
+            <div class="award-date">2023 - Present</div>
+            <p class="award-description">Recognition for academic excellence at Columbia University.</p>
+          </div>
+          <!-- Add more academic awards here -->
+        </div>
+
+        <!-- <div class="award-section">
+          <div class="award-header">Professional Recognition</div>
+          <div class="award-item">
+            <h3 class="award-title">Outstanding Intern Award</h3>
+            <div class="award-date">Summer 2022</div>
+            <p class="award-description">Recognized for exceptional contributions during the Amazon internship program.</p>
+          </div>
+          <!-- Add more professional awards here -->
+        <!-- </div> --> 
+
+        <div class="award-section">
+          <div class="award-header">Competitions & Research</div>
+          <div class="award-item">
+            <h3 class="award-title">American Astronomical Society Research Recognition</h3>
+            <div class="award-date">2021</div>
+            <p class="award-description">Discovered potentially habitable planet Kepler-69.</p>
+          </div>
+          <div class="award-item">
+            <h3 class="award-title">Conrad Challenge Winner</h3>
+            <div class="award-date">2020</div>
+            <p class="award-description">Lucidity</p>
+          </div>
+          <!-- Add more competition awards here -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 

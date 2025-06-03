@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiences - Justin Hou</title>
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #34495e;
+        --accent-color: #007bff;
+        --text-color: #333;
+        --background-color: #f5f5f5;
+        --card-background: white;
+      }
+
+      body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .header-title {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .nav a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .nav a:hover {
+        background-color: rgba(0, 123, 255, 0.1);
+      }
+
+      .nav a.active {
+        background-color: var(--accent-color);
+        color: white;
+      }
+
+      .experiences-container {
+        background-color: var(--card-background);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .experience-section {
+        display: none;
+        margin-bottom: 40px;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .experience-section.active {
+        display: block;
+      }
+
+      .experience-header {
+        color: var(--primary-color);
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--accent-color);
+      }
+
+      .experience-item {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-color);
+      }
+
+      .experience-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .experience-title {
+        color: var(--secondary-color);
+        font-size: 1.2em;
+        margin: 0 0 10px 0;
+      }
+
+      .experience-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+
+      .experience-description {
+        margin: 0 0 15px 0;
+      }
+
+      .experience-highlights {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .experience-highlights li {
+        margin-bottom: 5px;
+      }
+
+      .experience-toggles {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+      }
+
+      .toggle-button {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        background-color: white;
+        color: var(--secondary-color);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        font-size: 0.95em;
+        letter-spacing: 0.3px;
+      }
+
+      .toggle-button:hover {
+        background-color: #e9ecef;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .toggle-button.active {
+        background-color: var(--secondary-color);
+        color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Justin Hou</h1>
+        <p>I. I. Rabi Scholar @ Columbia University, Learning something new every day!</p>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="posts.html">Posts</a>
+        <a href="projects.html">Projects</a>
+        <a href="tags.html">Tags</a>
+        <a href="experiences.html" class="active">Experiences</a>
+        <a href="awards.html">Awards</a>
+      </nav>
+
+      <div class="experience-toggles">
+        <button class="toggle-button active" data-section="professional-experience">Professional Experience</button>
+        <button class="toggle-button" data-section="leadership-experience">Leadership Experience</button>
+        <button class="toggle-button" data-section="academic-experience">Academic Experience</button>
+      </div>
+
+      <div class="experiences-container">
+        <div class="experience-section" id="professional-experience">
+          <div class="experience-header">Professional Experience</div>
+          <div class="experience-item">
+            <h3 class="experience-title">Tech Investment Banking Intern - UBS</h3>
+            <div class="experience-date">Summer 2026</div>
+            <!-- <p class="experience-description">Will work under the Global Technology Group, with a focus on the semiconductor sector.</p> -->
+            <p class="experience-description">Making tech oligarchs richer.</p>
+            <ul class="experience-highlights">
+              <li>Support senior bankers in the execution of M&A transactions, IPOs, and capital raises for semiconductor and AI infrastructure companies.</li>
+              <li>Perform valuation analyses including DCF, precedent transactions, and comparable companies to assess strategic opportunities for clients in the technology sector.</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3 class="experience-title">Investment Analyst Intern - TSV Capital</h3>
+            <div class="experience-date">Jul 2024 – Sep 2024</div>
+            <!-- <p class="experience-description">Worked under VC firm partners to source and evaluate early-stage ventures.</p> -->
+            <p class="experience-description">Saw cool and dumb projects.</p>
+            <ul class="experience-highlights">
+              <li>Conducted due diligence and benchmarking of 10+ AI startups against comparable public companies using
+                revenue multiples, growth metrics, and market positioning contributing to investment recommendations.</li>
+              <li>Produced industry analysis of 3.5 B TAM Embodied AI sector, mapping key industry players and emerging
+                technologies across growth and value companies, and presented strategic market overview to firm partners.</li>
+              <li>Coded tool to scrape Crunchbase and source founders of 20+ prospective AI portfolio companies.</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3 class="experience-title">Machine Learning Intern - Lockheed Martin Solar and Astrophysics Lab</h3>
+            <div class="experience-date">Jun 2022 – Jul 2023</div>
+            <!-- <p class="experience-description">3 of 100 applicants selected to the lab. Worked under Dr. Georgios Chintzoglou.</p> -->
+            <p class="experience-description">Stared at the sun.</p>
+            <ul class="experience-highlights">
+              <li>Developed recurrent neural network to analyze polarity inversion line evolution in solar magnetogram
+                sequence images, predicting active region eruptivity with a 7-10% improvement over baseline methods.</li>
+              <li>Built a GUI application in Python for Stanford astrophysics research collaborators to view temporal evolution
+                of sunspots and eruptivity events, improving data accessibility and interpretability.</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3 class="experience-title">CEO and Founder — Lucidity</h3>
+            <div class="experience-date">Sep 2020 – Apr 2022</div>
+            <p class="experience-description">Healing brains from brainrot.</p>
+            <ul class="experience-highlights">
+                <li>Developed and piloted a classroom management application in 50+ classes to intelligently block distracting sites with AI, encourage students to foster a healthier relationship with learning, and reward productivity.</li>
+                <li>Consulted 50+ teachers across Los Altos Christian School, Gunn High School, and Applied Computing Foundation classrooms to understand their concerns about classroom focus and lesson retention.</li>
+                <li>2020 Conrad Challenge Finalist in Transforming Education through Technology.</li>
+            </ul>
+          </div>
+          <!-- Add more professional experiences here -->
+        </div>
+
+        <div class="experience-section" id="leadership-experience">
+          <div class="experience-header">Leadership Experience</div>
+          <div class="experience-item">
+            <h3 class="experience-title">President - Columbia Organization of Rising Entrepreneurs (CORE)</h3>
+            <div class="experience-date">May 2025 - Present</div>
+            <p class="experience-description">How did I get here.</p>
+            <ul class="experience-highlights">
+              <li>Directing and emceeing CORE Demo Day, managing a $10K event budget to organize Columbia's largest
+                undergraduate event, inviting DRF Founder Molly Fowler and Ramp CPO Geoff Charles, hosting startup pitch
+                competition, and facilitating connections between 100+ alumni, founders, and club members.</li>
+              <li>Managing club funds, supporting entrepreneurs through CORE Enterprises, bringing cool speakers.</li>
+              <li>Managing the Lion Launch fellowship, mentoring a five-team cohort to develop startups and pitch to venture
+                capital firms, enhancing entrepreneurial skills and funding readiness.</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3 class="experience-title">Director - Almaworks Accelerator</h3>
+            <div class="experience-date">Sep 2024 - May 2025</div>
+            <p class="experience-description">How did I get here.</p>
+            <ul class="experience-highlights">
+              <li>Evaluating and sourcing 50+ early-stage startup pitches quarterly considering market capitalization, revenue
+                metrics for traction, scalability, and team dynamics to select six high-growth ventures for the portfolio.</li>
+              <li>Organizing weekly mentorship sessions culminating in a demo day, connecting 200+ founders, investors, and
+                alumni, resulting in enhanced funding and networking opportunities at the Columbia Startup Lab.</li>
+            </ul>
+          </div>
+          <!-- Add more leadership experiences here -->
+        </div>
+
+        <div class="experience-section" id="academic-experience">
+          <div class="experience-header">Academic Experience</div>
+          <div class="experience-item">
+            <h3 class="experience-title">Research Assistant - Computational Morphogenomics Lab @ Columbia University</h3>
+            <div class="experience-date">May 2024 - Nov 2024</div>
+            <p class="experience-description">I. I. Rabi Scholar researcher</p>
+            <ul class="experience-highlights">
+              <li>Implemented cross-attention transformer architecture with spatial and gene expression embeddings for tissue
+                segmentation and classification, achieving a 0.82 F1 score while handling sparse gene expression profiles.</li>
+              <li>Optimized graph convolutional network and PCA model for semantic segmentation of spatial transcriptomic
+                cell images through cross-validating five key hyperparameters, improving F1 score from 0.72 to 0.79.</li>
+              <li>Integrated closed-loop enhancement to models using clustering loss and statistical error analysis.</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3 class="experience-title">Invited Research Presenter — American Astronomical Society</h3>
+            <div class="experience-date">Dec 2021 - Jan 2022</div>
+            <p class="experience-description">Only high school research team to present at American Astronomical Society 239.</p>
+            <ul class="experience-highlights">
+              <li>Discovery of Debris Disks in Kepler Habitable Small Planet Candidates: Presented research on discovery of
+                potentially habitable Kepler Object of Interest exoplanet, Kepler-69c, using infrared-excess detections from
+                debris disks emission.</li>
+              <li><a href="https://aas.org/meetings/aas239/2nd-media-advisory#thur_1">Press Kit</a> </li>
+            </ul>
+          </div>
+          <!-- Add more academic experiences here -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+        const sections = document.querySelectorAll('.experience-section');
+
+        // Show professional experience by default
+        document.getElementById('professional-experience').classList.add('active');
+
+        toggleButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            // Remove active class from all buttons and sections
+            toggleButtons.forEach(btn => btn.classList.remove('active'));
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Show corresponding section
+            const sectionId = this.getAttribute('data-section');
+            document.getElementById(sectionId).classList.add('active');
+          });
+        });
+      });
+    </script>
+  </body>
+</html> 

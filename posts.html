@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts - Justin Hou's Blog</title>
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #34495e;
+        --accent-color: #007bff;
+        --text-color: #333;
+        --background-color: #f5f5f5;
+        --card-background: white;
+      }
+
+      body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .header-title {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .nav a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .nav a:hover {
+        background-color: rgba(0, 123, 255, 0.1);
+      }
+
+      .nav a.active {
+        background-color: var(--accent-color);
+        color: white;
+      }
+
+      .post-list {
+        background-color: var(--card-background);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .post-item {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .post-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .post-item h2 {
+        color: var(--secondary-color);
+        margin-top: 0;
+      }
+
+      .post-meta {
+        color: #666;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+
+      .post-item a {
+        color: var(--accent-color);
+        text-decoration: none;
+      }
+
+      .post-item a:hover {
+        text-decoration: underline;
+      }
+
+      .post-tags {
+        margin-top: 10px;
+      }
+
+      .post-tag {
+        display: inline-block;
+        background-color: #f0f0f0;
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-size: 0.8em;
+        margin-right: 5px;
+        color: var(--secondary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Justin Hou</h1>
+        <p>I. I. Rabi Scholar @ Columbia University, Learning something new every day!</p>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="posts.html" class="active">Posts</a>
+        <a href="projects.html">Projects</a>
+        <a href="tags.html">Tags</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="awards.html">Awards</a>
+      </nav>
+
+      <div class="welcome">
+        <h1>👋 Welcome to My Blog (THIS PAGE IS UNDER PROGRESS 😭)</h1>
+        <p>I'm documenting my learning journey and sharing insights about tech, entrepreneurship, and the political and economic state of the world. Based on the number of grammar mistakes in my posts, you can probably tell how much ChatGPT is involved.</p>
+      </div>
+
+      <div class="post-list">
+        <div class="post-item">
+          <h2><a href="/posts/entrepreneurship">Why We Think</a></h2>
+          <div class="post-meta">May 1, 2024 | Estimated Reading Time: 40 min</div>
+          <p>Exploring the intersection of entrepreneurship and technology, discussing how innovative thinking shapes the future of software development and business solutions.</p>
+          <div class="post-tags">
+            <span class="post-tag">Entrepreneurship</span>
+            <span class="post-tag">Technology</span>
+            <span class="post-tag">Innovation</span>
+          </div>
+        </div>
+
+        <div class="post-item">
+          <h2><a href="/posts/software-engineering">Software Engineering at Scale</a></h2>
+          <div class="post-meta">April 15, 2024 | Estimated Reading Time: 30 min</div>
+          <p>Insights from my experience working on large-scale software systems, focusing on best practices, architecture decisions, and performance optimization.</p>
+          <div class="post-tags">
+            <span class="post-tag">Software Engineering</span>
+            <span class="post-tag">Architecture</span>
+            <span class="post-tag">Performance</span>
+          </div>
+        </div>
+
+        <div class="post-item">
+          <h2><a href="/posts/research">Research in Computer Science</a></h2>
+          <div class="post-meta">March 28, 2024 | Estimated Reading Time: 25 min</div>
+          <p>Sharing findings from my research work at Columbia University, covering topics in machine learning, data analysis, and emerging technologies.</p>
+          <div class="post-tags">
+            <span class="post-tag">Research</span>
+            <span class="post-tag">Machine Learning</span>
+            <span class="post-tag">Data Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 
