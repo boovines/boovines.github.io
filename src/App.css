@@ -1,42 +1,317 @@
-#root {
-  max-width: 1280px;
+.va {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 88px 96px 72px;
+  box-sizing: border-box;
+  background: var(--bg);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.va-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.va-headcol {
+  min-width: 0;
+  flex: 1;
+}
+
+.va-name {
+  font-size: clamp(52px, 8vw, 84px);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.va-tag {
+  margin: 14px 0 0;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.va-toplinks {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.va-toplink {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--rule);
+  transition: color 160ms, border-color 160ms;
+}
+
+.va-toplink:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.va-stamp {
+  position: relative;
+  width: 96px;
+  height: 120px;
+  flex-shrink: 0;
+  background: var(--paper);
+  padding: 8px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 var(--rule), 0 8px 16px oklch(0% 0 0 / 0.06);
+  transform: rotate(2.5deg);
+}
+
+.va-stamp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.85) contrast(0.95);
+  display: block;
+}
+
+.va-stamp-perfs {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle 3px at 0 50%, var(--bg) 100%, transparent 100%) repeat-y left,
+    radial-gradient(circle 3px at 100% 50%, var(--bg) 100%, transparent 100%) repeat-y right;
+  background-size: 6px 8px;
+  pointer-events: none;
+}
+
+.va-rule {
+  height: 1px;
+  background: var(--rule);
+  margin: 56px 0 48px;
+}
+
+.va-section {
+  margin-bottom: 56px;
+}
+
+.va-prose {
+  font-size: 22px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+  max-width: 64ch;
+  text-wrap: pretty;
+}
+
+.va-label {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.va-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.va-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.va-list li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 12px 0;
+  border-top: 1px dashed var(--rule);
+  align-items: baseline;
+}
+
+.va-list li:first-child {
+  border-top: none;
+  padding-top: 4px;
+}
+
+.va-roleflag {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.va-roletext {
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.va-year {
+  font-size: 13px;
+  color: var(--whisper);
+}
+
+.va-prev-text {
+  font-size: 19px;
+  color: var(--ink-soft);
+}
+
+.va-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--rule);
+}
+
+.va-project {
+  display: block;
+  padding: 22px 24px 22px 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: inherit;
+  transition: background 160ms;
+}
+
+.va-project:nth-child(2n) {
+  padding-left: 24px;
+  padding-right: 0;
+  border-left: 1px solid var(--rule);
+}
+
+.va-project:hover {
+  background: var(--accent-soft);
+}
+
+.va-proj-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.va-proj-name {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.va-proj-year {
+  font-size: 12px;
+  color: var(--whisper);
+}
+
+.va-proj-blurb {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 42ch;
+  text-wrap: pretty;
+}
+
+.va-more {
+  display: block;
+  margin: 18px auto 0;
+  background: transparent;
+  border: 1px dashed var(--rule);
+  color: var(--muted);
+  padding: 10px 22px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: color 160ms, border-color 160ms, background 160ms;
+}
+
+.va-more:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.va-also-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 8px 0;
+  align-items: baseline;
+}
+
+.va-also-tag {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stamp);
+}
+
+.va-also-text {
+  font-size: 19px;
+  color: var(--ink-soft);
+}
+
+.va-footer {
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.va-foot-meta {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--whisper);
+  text-transform: uppercase;
+}
+
+.va-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .va {
+    padding: 56px 24px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .va-header {
+    flex-direction: column;
+    gap: 20px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .va-list li,
+  .va-also-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .va-projects {
+    grid-template-columns: 1fr;
+  }
 
-.read-the-docs {
-  color: #888;
+  .va-project:nth-child(2n) {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .va-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
