@@ -35,11 +35,11 @@ export const siteData = {
     { name: 'Debris Disks', year: '2021', blurb: 'Discovery of debris disks in habitable Kepler planet candidates. AAS 239.', href: 'https://aas.org/meetings/aas239/2nd-media-advisory#thur_1' },
   ],
   also: [
-    { tag: 'music', text: 'I produce, mostly at night. Used to play electric guitar in a band.' },
-    { tag: 'runway', text: 'Walked a runway once. Was told to look bored. Nailed it.' },
-    { tag: 'chess', text: 'Daily puzzles, currently stuck around 1700.' },
-    { tag: 'water polo', text: 'Eggbeater kick is underrated cardio.' },
-    { tag: 'golf', text: 'Slowly getting better at not getting worse.' },
+    { tag: 'music', text: 'I produce music and play electric guitar.' },
+    { tag: 'runway', text: 'I have done runway modeling.' },
+    { tag: 'chess', text: 'I play chess and do daily puzzles.' },
+    { tag: 'water polo', text: 'I play water polo.' },
+    { tag: 'golf', text: 'I am learning to play golf.' },
   ],
   links: [
     { label: 'GitHub', href: 'https://github.com/boovines' },
